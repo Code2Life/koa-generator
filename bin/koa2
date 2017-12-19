@@ -1,30 +1,31 @@
 #!/usr/bin/env node
 
-let yargs = require('yargs');
-let factory = require('../index');
+const yargs = require('yargs');
+const colors = require('colors');
+const factory = require('../index');
 
 let argv = yargs.usage('Usage: $0 <options>')
 .option('p', {
   alias: 'port',
-  describe: 'Server port',
+  describe: 'Server port. \n' + 'usage: -p/--port 3000'.green,
   default: 3000
 })
 .option('d', {
   alias: 'database',
-  describe: 'DataBase and relative examples for generated framework, support mongodb, mysql currently. ',
+  describe: 'DataBase and relative examples for generated framework, support mongodb, mysql currently. \n' + 'usage: -d/--database mysql/mongodb/none'.green,
   default: 'none'
 })
 .option('t', {
   alias: 'template',
-  describe: 'Template engine for generated framework, support jade/pug, ejs currently.',
+  describe: 'Template engine for generated framework, support jade/pug, ejs currently.  \n' + 'usage: -t/--template jade/pug/ejs/none'.green,
   default: 'none'
 })
 .option('a', {
   alias: 'addons',
-  describe: 'Addons/Plugins for specific feature.',
+  describe: 'Addons/Plugins for specific feature, custom plugin should exist as a CommonJs module, like koa-generator-pro-html2pdf, ../koa-my-plugin\n' + 'usage: -a/--addons plugin1,plugin2,plugin3...'.green,
   default: ''
 })
-.help('help', 'Show this help and exit')
+.help('help', 'Show this help and exit.\n' + 'usage: --help'.green)
 .version(require('../package').version)
 .argv;
 
