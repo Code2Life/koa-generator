@@ -1,0 +1,40 @@
+{
+  "name": "koa-generator",
+  "version": "1.0.0",
+  "description": "A flexible code generator for koa2 with ES6/7",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/koa2"
+  },
+  "bin": {
+    "koa-generator": "./bin/koa-generator-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code2Life/koa-generator.git"
+  },
+  "keywords": [
+    "koa2",
+    "generator",
+    "full-stack",
+    "sequelize",
+    "mongodb",
+    "mysql",
+    "ejs",
+    "pug",
+    "jade"
+  ],
+  "author": "Joey Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Code2Life/koa-generator/issues"
+  },
+  "homepage": "https://github.com/Code2Life/koa-generator#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "yargs": "^10.0.3"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  }
+}

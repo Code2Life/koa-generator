@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+let yargs = require('yargs');
+let factory = require('../index');
+
+let argv = yargs.usage('Usage: $0 <options>')
+.option('p', {
+  alias: 'port',
+  describe: 'Server port',
+  default: 3000
+})
+.option('d', {
+  alias: 'database',
+  describe: 'DataBase and relative examples for generated framework, support mongodb, mysql currently. ',
+  default: 'none'
+})
+.option('t', {
+  alias: 'template',
+  describe: 'Template engine for generated framework, support jade/pug, ejs currently.',
+  default: 'none'
+})
+.option('a', {
+  alias: 'addons',
+  describe: 'Addons/Plugins for specific feature.',
+  default: ''
+})
+.help('help', 'Show this help and exit')
+.version(require('../package').version)
+.argv;
+
+(async () => {
+  try {
+    await factory.build(argv);
+  } catch(e) {
+    console.error(e);
+  }
+})();
