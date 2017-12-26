@@ -1,13 +1,13 @@
 {
-  "name": "koa-generator",
-  "version": "1.0.0",
+  "name": "koa-generator-pro",
+  "version": "1.0.3",
   "description": "A flexible code generator for koa2 with ES6/7",
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/koa2"
   },
   "bin": {
-    "koa-generator": "./bin/koa-generator-cli"
+    "koa2": "./bin/koa2"
   },
   "repository": {
     "type": "git",

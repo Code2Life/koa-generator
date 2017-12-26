@@ -46,7 +46,7 @@ async function valid(options) {
   let targetSub = require('fs').readdirSync(target);
   if(targetSub.length > 0) {
     util.err(`Current directory is NOT EMPTY, please run generator in a empty directory. `);
-    //res = false;
+    res = false;
   }
   return res;
 };
