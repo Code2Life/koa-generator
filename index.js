@@ -36,11 +36,17 @@ async function valid(options) {
     }
   }
 
+  if(options['unit-test'].trim() == 'true') {
+    options.uniTest = true;
+  } else {
+    options.uniTest = false;
+  }
+
   let target = process.cwd();
   let targetSub = require('fs').readdirSync(target);
   if(targetSub.length > 0) {
     util.err(`Current directory is NOT EMPTY, please run generator in a empty directory. `);
-    res = false;
+    //res = false;
   }
   return res;
 };
@@ -67,3 +73,4 @@ async function build(options) {
 }
 
 exports.build = build;
+exports.util = util;

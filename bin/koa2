@@ -20,6 +20,11 @@ let argv = yargs.usage('Usage: $0 <options>')
   describe: 'Template engine for generated framework, support jade/pug, ejs currently.  \n' + 'usage: -t/--template jade/pug/ejs/none'.green,
   default: 'none'
 })
+.option('u', {
+  alias: 'unit-test',
+  describe: 'add unit test examples wrote by mocha + should.js. \n' + 'usage: -u/--unit-test true/false'.green,
+  default: 'true'
+})
 .option('a', {
   alias: 'addons',
   describe: 'Addons/Plugins for specific feature, custom plugin should exist as a CommonJs module, like koa-generator-pro-html2pdf, ../koa-my-plugin\n' + 'usage: -a/--addons plugin1,plugin2,plugin3...'.green,
