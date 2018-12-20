@@ -59,6 +59,6 @@ async function build(pathStr, root, package) {
 MIT License
 
 ## Contact
-email wbyang3@iflytek.com
+email joey.yang@zoom.us
 
 

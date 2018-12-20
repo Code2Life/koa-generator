@@ -1,6 +1,6 @@
 {
   "name": "koa-generator-pro",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A flexible code generator for koa2 with ES6/7",
   "main": "index.js",
   "scripts": {
