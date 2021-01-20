@@ -58,7 +58,4 @@ async function build(pathStr, root, package) {
 ## License
 MIT License
 
-## Contact
-email joey.yang@zoom.us
-
 
